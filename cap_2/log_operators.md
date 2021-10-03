@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./data_types.md) || [Siguiente >](./mat_operators.md)
+[<< Inicio](./README.md) [< Volver](./data_types.md) || [Siguiente >](./mat_operators.md)
 
 ---
 
@@ -94,4 +94,4 @@ print("ext" in x)
 
 ---
 
-[<< Inicio](./intro) [< Volver](./data_types.md) || [Siguiente >](./mat_operators.md)
+[<< Inicio](./README.md) [< Volver](./data_types.md) || [Siguiente >](./mat_operators.md)

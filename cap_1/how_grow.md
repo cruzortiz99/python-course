@@ -1,6 +1,6 @@
 ![Python Logo](../assets/img/python-logo.png)
 
-[<< Inicio](./intro.md) [< Volver](./how_start.md) || [FIN](./intro.md)
+[<< Inicio](./README.md) [< Volver](./how_start.md) || [FIN](./README.md)
 
 ---
 
@@ -54,4 +54,4 @@
 
 ---
 
-[<< Inicio](./intro.md) [< Volver](./how_start.md) || [FIN](./intro.md)
+[<< Inicio](./README.md) [< Volver](./how_start.md) || [FIN](./README.md)

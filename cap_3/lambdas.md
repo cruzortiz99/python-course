@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./basic_functions.md) || [Siguiente >](./fp.md)
+[<< Inicio](./README.md) [< Volver](./basic_functions.md) || [Siguiente >](./fp.md)
 
 ---
 
@@ -30,4 +30,4 @@ forEach(lambda index, value: print(index, value), [1, 1.2, 3, 85])
 
 ---
 
-[<< Inicio](./intro) [< Volver](./basic_functions.md) || [Siguiente >](./fp.md)
+[<< Inicio](./README.md) [< Volver](./basic_functions.md) || [Siguiente >](./fp.md)

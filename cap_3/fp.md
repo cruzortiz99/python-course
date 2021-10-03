@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./lambdas.md) || [Fin](./intro.md)
+[<< Inicio](./README.md) [< Volver](./lambdas.md) || [Fin](./README.md)
 
 ---
 
@@ -38,4 +38,4 @@ print(some_list, reduced_list)
 
 ---
 
-[<< Inicio](./intro) [< Volver](./lambdas.md) || [Fin](./intro.md)
+[<< Inicio](./README.md) [< Volver](./lambdas.md) || [Fin](./README.md)

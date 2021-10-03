@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./control_flows.md) || [Fin](./intro.md)
+[<< Inicio](./README.md) [< Volver](./control_flows.md) || [Fin](./README.md)
 
 ---
 
@@ -51,4 +51,4 @@ while(a < 10):
 
 ---
 
-[<< Inicio](./intro) [< Volver](./control_flows.md) || [Fin](./intro.md)
+[<< Inicio](./README.md) [< Volver](./control_flows.md) || [Fin](./README.md)

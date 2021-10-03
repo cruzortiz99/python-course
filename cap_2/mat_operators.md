@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./log_operators.md) || [Siguiente >](./control_flows.md)
+[<< Inicio](./README.md) [< Volver](./log_operators.md) || [Siguiente >](./control_flows.md)
 
 ---
 
@@ -151,4 +151,4 @@ print(15 >= 41)
 
 ---
 
-[<< Inicio](./intro) [< Volver](./log_operators.md) || [Siguiente >](./control_flows.md)
+[<< Inicio](./README.md) [< Volver](./log_operators.md) || [Siguiente >](./control_flows.md)

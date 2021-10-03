@@ -1,6 +1,6 @@
 ![Python Logo](../assets/img/python-logo.png)
 
-[<< Inicio](./intro.md) [< Volver](./why_python.md) || [Siguiente >](./how_grow.md)
+[<< Inicio](./README.md) [< Volver](./why_python.md) || [Siguiente >](./how_grow.md)
 
 ---
 
@@ -43,4 +43,4 @@
 
 ---
 
-[<< Inicio](./intro.md) [< Volver](./why_python.md) || [Siguiente >](./how_grow.md)
+[<< Inicio](./README.md) [< Volver](./why_python.md) || [Siguiente >](./how_grow.md)

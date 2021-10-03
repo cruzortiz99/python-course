@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[< Volver](intro.md) || [Siguiente >](./data_types.md)
+[< Volver](./README.md) || [Siguiente >](./data_types.md)
 
 ---
 
@@ -37,4 +37,4 @@ d = Person("Beatriz")
 
 ---
 
-[< Volver](intro.md) || [Siguiente >](./data_types.md)
+[< Volver](./README.md) || [Siguiente >](./data_types.md)

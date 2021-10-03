@@ -1,6 +1,6 @@
 ![Python Logo](../assets/img/python-logo.png)
 
-[< Volver](./intro.md) || [Siguiente >](./how_start.md)
+[< Volver](./README.md) || [Siguiente >](./how_start.md)
 
 ---
 
@@ -53,4 +53,4 @@ Python es un lenguaje de programación **interpretado** y **dinámico**:
 
 ---
 
-[< Volver](./intro.md) || [Siguiente >](./how_start.md)
+[< Volver](./README.md) || [Siguiente >](./how_start.md)

@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./variables.md) || [Siguiente >](./log_operators.md)
+[<< Inicio](./README.md) [< Volver](./variables.md) || [Siguiente >](./log_operators.md)
 
 ---
 
@@ -120,4 +120,4 @@ print(type(OwnType()))
 
 ---
 
-[<< Inicio](./intro) [< Volver](./variables.md) || [Siguiente >](./log_operators.md)
+[<< Inicio](./README.md) [< Volver](./variables.md) || [Siguiente >](./log_operators.md)

@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./mat_operators.md) || [Siguiente >](./loop_flows.md)
+[<< Inicio](./README.md) [< Volver](./mat_operators.md) || [Siguiente >](./loop_flows.md)
 
 ---
 
@@ -41,4 +41,4 @@ else:
 
 ---
 
-[<< Inicio](./intro) [< Volver](./mat_operators.md) || [Siguiente >](./loop_flows.md)
+[<< Inicio](./README.md) [< Volver](./mat_operators.md) || [Siguiente >](./loop_flows.md)

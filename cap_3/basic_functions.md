@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./functions.md) || [Siguiente >](./lambdas.md)
+[<< Inicio](./README.md) [< Volver](./functions.md) || [Siguiente >](./lambdas.md)
 
 ---
 
@@ -69,4 +69,4 @@ str(47589658)
 
 ---
 
-[<< Inicio](./intro) [< Volver](./functions.md) || [Siguiente >](./lambdas.md)
+[<< Inicio](./README.md) [< Volver](./functions.md) || [Siguiente >](./lambdas.md)

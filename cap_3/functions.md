@@ -1,6 +1,6 @@
 <img src="../assets/img/python-logo.png" />
 
-[<< Inicio](./intro) [< Volver](./intro.md) || [Siguiente >](./basic_functions.md)
+[<< Inicio](./README.md) [< Volver](./README.md) || [Siguiente >](./basic_functions.md)
 
 ---
 
@@ -122,4 +122,4 @@ print(lazyAddLambda(1000)(10))
 
 ---
 
-[<< Inicio](./intro) [< Volver](./intros.md) || [Siguiente >](./basic_functions.md)
+[<< Inicio](./README.md) [< Volver](./README.md) || [Siguiente >](./basic_functions.md)
