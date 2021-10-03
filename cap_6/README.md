@@ -3,5 +3,3 @@
 # CAPITULO VI: Programas I/O y de manejo de archivos
 
 ## Contenido
-
-- [Clases y Objetos](./classes.md)

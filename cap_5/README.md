@@ -1,7 +1,5 @@
 <img src="../assets/img/python-logo.png" />
 
-# CAPITULO V: Error handling
+# CAPITULO V: Manejo de Errores
 
 ## Contenido
-
-- [Clases y Objetos](./classes.md)

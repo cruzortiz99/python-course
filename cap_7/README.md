@@ -3,5 +3,3 @@
 # CAPITULO VII: Librerias, Paquetes y Gestion de Paquetes
 
 ## Contenido
-
-- [Clases y Objetos](./classes.md)
