@@ -85,7 +85,7 @@ print("ext" in x)
 
 ```python
 x = "texto"
-print("ext" in x)
+print("ext" not in x)
 
 # output: False
 ```
