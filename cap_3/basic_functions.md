@@ -24,7 +24,7 @@ suma = sum([1, 2, 3])
 print(suma)
 ```
 
-## Minimo valor de lista
+## Máximo valor de lista
 
 ```python
 maximo = max([1, 2, 3])
@@ -32,7 +32,7 @@ maximo = max([1, 2, 3])
 print(maximo)
 ```
 
-## Maximo valor de una lista
+## Mínimo valor de una lista
 
 ```python
 minimo = min([1, 2, 3])
