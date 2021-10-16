@@ -108,5 +108,61 @@ client_invoice.addProduct(InvoiceProduct(products[2], 2))
 
 print(client_invoice.print())
 
+
 # 4. Cree a través del uso de clase o clases, una calculadora. Esta debe
 # hacer las operaciones de suma, resta, multiplicación y división.
+class Calculator():
+    def __init__(self):
+        self.__first__ = None
+        self.__second__ = None
+
+    def set_first_value(self, first):
+        self.__first__ = first
+        return self
+
+    def set_second_value(self, second):
+        self.__second__ = second
+        return CalculatorOperation(self.__first__, self.__second__)
+
+    def get_result(self):
+        return self.__first__
+
+    def reset(self):
+        self.__first__ = None
+        self.__second__ = None
+        return self
+
+
+class CalculatorOperation():
+    def __init__(self, first, second):
+        self.__first__ = first
+        self.__second__ = second
+
+    def add(self):
+        return Calculator().set_first_value(self.__first__ + self.__second__)
+
+    def substract(self):
+        return Calculator().set_first_value(self.__first__ - self.__second__)
+
+    def multiply(self):
+        return Calculator().set_first_value(self.__first__ * self.__second__)
+
+    def divide(self):
+        if self.__second__ is None or self.__second__ == 0:
+            return Calculator().set_first_value(self.__first__)
+        else:
+            return Calculator().set_first_value(
+                self.__first__ / self.__second__)
+
+
+calculator = Calculator()
+add_result = calculator.set_first_value(5).set_second_value(10).add()
+substract_result = add_result.set_second_value(10).substract()
+multiply_result = substract_result.set_second_value(10).multiply()
+divide_result = multiply_result.set_second_value(2).divide()
+print(f"""4. Calculated:
+-> Suma 5 + 10: {add_result.get_result()}
+-> Resta -10: {substract_result.get_result()}
+-> Multiplicación x10: {multiply_result.get_result()}
+-> División /2: {divide_result.get_result()}
+""")
