@@ -78,7 +78,11 @@
    ```
 
    7.1. Contar la cantidad de persona en la lista.
+
    7.2. Contar la cantidad de personas que poseen amigos.
+
    7.3. Contar la cantidad de personas que poseen el mismo tipo de carro.
+
    7.4. Mostrar una lista de los carros que se poseen
+
    7.5. Convierta los diccionarios en la lista en un tipo personalizado
