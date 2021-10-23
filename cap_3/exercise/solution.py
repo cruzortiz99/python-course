@@ -10,9 +10,8 @@ def add(first, second):
 def add(*nums):
     result = 0
     for num in nums:
-        result += num
+        result = result + num
     return result
-
 
 # 3. Crear una función que devuelva un valor cuando una condición se cumpla y
 # otro valor cuando la condición no se cumpla. Ejemplo:
@@ -20,6 +19,8 @@ def add(*nums):
 # ifOrElse(whenIsTrue, whenIsFalse, condition)
 # ifOrElse("hola", "chao", True) -> "hola"
 # ifOrElse("hola", "chao", False) -> "chao"
+
+
 def ifOrElse(whenSuccess, whenFails, condition):
     if condition:
         return whenSuccess
@@ -53,14 +54,35 @@ def ifOrElse(whenSuccess, whenFails, condition):
         return whenFails()
 
 
+# if 15 > 16:
+#     do_some_work()
+# else:
+#     do_nothing()
+
+# ifOrElse(do_some_work, do_nothing, slow_condition)
+
+
 # 6. Hacer de las funciones anteriores, de ejecución perezosa o funciones
 # de orden superior.
 def addLazy(*nums): return lambda: add(nums)
 
 
 def ifOrElseLazy(whenSuccess, whenFails, condition):
-    return lambda: ifOrElse(whenSuccess, whenFails, condition)
+    def container():
+        if condition():
+            return whenSuccess()
+        else:
+            return whenFails()
+    return container
 
+# lazy_result = ifOrElseLazy(do_some_work, do_nothing, slow_condition)
+
+# ifOrElse(do_some_work,do_nothing,slow_condition)
+
+# ...
+
+
+# lazy_result()
 
 # 7.Dado:
 # list = [
@@ -226,37 +248,43 @@ print(f"7.1 Cantidad de personas: {len(persons)}")
 
 
 # 7.2
+def if_has_friend(person):
+    return len(person["friends"]) > 0
+
+
 person_with_friends = len(
-    list(filter(
-        lambda person_dic: len(
-            person_dic["friends"]) > 0,
-        persons)))
+    list(filter(if_has_friend, persons)))
+
 print(f"7.2 Cantidad de personas con amigos: {person_with_friends}")
 
 
 # 7.3
 
 def groupByCar(groups, person_dict):
-    if person_dict["car"]["name"] in groups:
-        groups[person_dict["car"]["name"]
-               ] = groups[person_dict["car"]["name"]] + [person_dict]
+    car_name = person_dict["car"]["name"]
+    if car_name in groups:
+        groups[car_name] = groups[car_name] + [person_dict]
     else:
-        groups[person_dict["car"]["name"]] = [person_dict]
+        groups[car_name] = [person_dict]
     return groups
 
 
-def totalizeGroups(groups_dict):
+def totalizeGroups(persons_group_by_car):
     totalize = {}
-    for key in groups_dict:
-        totalize[key] = len(groups_dict[key])
+    for car_name in persons_group_by_car:
+        totalize[car_name] = len(
+            persons_group_by_car[car_name])
     return totalize
 
 
 print(f"""7.3 Cantidad de personas agrupadas por carro: {
       totalizeGroups(reduce(groupByCar, persons, {}))}""")
-
-
+# [{...}, {...}]
+# {"Logan": [{...}], "Mustang": [{...}]}
+# {"Logan": 85, "Mustang": 8}
 # 7.4
+
+
 def dischardIfExists(acc, current_car):
     filtered_car_name = list(map(lambda car: car["name"], acc))
     if current_car["name"] in filtered_car_name:
@@ -267,6 +295,8 @@ def dischardIfExists(acc, current_car):
 
 cars = reduce(dischardIfExists, list(
     map(lambda person: person["car"], persons)), [])
+
+
 print(f"7.4 Carros que se poseen: {list(map(lambda car: car['name'], cars))}")
 
 
@@ -294,14 +324,16 @@ def dictToPersons(person_dict):
         car=Car(
             name=person_dict["car"]["name"],
             type=person_dict["car"]["type"]),
-        friends=map(
-            lambda person: Person(
-                name=person["name"],
-                last_name=person["last_name"],
-                age=person["age"]),
-            person_dict["friends"]))
+        friends=list(map(
+            lambda friend: Person(
+                name=friend["name"],
+                last_name=friend["last_name"],
+                age=friend["age"]
+            ),
+            person_dict["friends"])))
 
 
 persons_in_class = list(map(dictToPersons, persons))
+
 print("7.5 Personas con clases: ", list(
     map(lambda person: person.name, persons_in_class)))

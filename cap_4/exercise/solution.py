@@ -6,8 +6,8 @@ from datetime import datetime
 
 
 class Car():
-    def __init__(self, branch, name, location, time_in):
-        self.branch = branch
+    def __init__(self, brand, name, location, time_in):
+        self.brand = brand
         self.name = name
         self.location = location
         self.time_in = time_in
@@ -17,7 +17,8 @@ class Car():
 # para la adopción de animales.
 
 class Pet():
-    def __init__(self, name, race, color, owner=None):
+    def __init__(self, id, name, race, color, owner=None):
+        self.id = id
         self.name = name
         self.race = race
         self.color = color
@@ -39,6 +40,9 @@ class InvoiceProduct(Product):
     def __init__(self, product, quantity):
         Product.__init__(self, product.name, product.price)
         self.quantity = quantity
+
+    def total_price(self):
+        return self.price * self.quantity
 
 
 class Client():
@@ -68,7 +72,7 @@ class Invoice():
     def getTotalPrice(self):
         return reduce(lambda acc, product_price: acc + product_price,
                       list(map(
-                          lambda product: product.price * product.quantity,
+                          lambda product: product.total_price(),
                           self.__products__)),
                       0)
 
@@ -89,7 +93,7 @@ class Invoice():
     def __getPrintableLines__(self, acc, product):
         return f"""{acc}
       {product.name}: {product.price} x {product.quantity} = {
-        product.price * product.quantity}"""
+        product.total_price()}"""
 
 
 products = [
@@ -111,7 +115,7 @@ print(client_invoice.print())
 
 # 4. Cree a través del uso de clase o clases, una calculadora. Esta debe
 # hacer las operaciones de suma, resta, multiplicación y división.
-class Calculator():
+class CalculatorBuilder():
     def __init__(self):
         self.__first__ = None
         self.__second__ = None
@@ -139,30 +143,55 @@ class CalculatorOperation():
         self.__second__ = second
 
     def add(self):
-        return Calculator().set_first_value(self.__first__ + self.__second__)
+        return CalculatorBuilder().set_first_value(
+            self.__first__ + self.__second__)
 
     def substract(self):
-        return Calculator().set_first_value(self.__first__ - self.__second__)
+        return CalculatorBuilder().set_first_value(
+            self.__first__ - self.__second__)
 
     def multiply(self):
-        return Calculator().set_first_value(self.__first__ * self.__second__)
+        return CalculatorBuilder().set_first_value(
+            self.__first__ * self.__second__)
 
     def divide(self):
         if self.__second__ is None or self.__second__ == 0:
-            return Calculator().set_first_value(self.__first__)
+            return CalculatorBuilder().set_first_value(self.__first__)
         else:
-            return Calculator().set_first_value(
+            return CalculatorBuilder().set_first_value(
                 self.__first__ / self.__second__)
 
 
-calculator = Calculator()
-add_result = calculator.set_first_value(5).set_second_value(10).add()
-substract_result = add_result.set_second_value(10).substract()
-multiply_result = substract_result.set_second_value(10).multiply()
+calculator = CalculatorBuilder()
+add_result = calculator.set_first_value(11).set_second_value(5).add()
+substract_result = add_result.set_second_value(15).substract()
+multiply_result = substract_result.set_second_value(7).multiply()
 divide_result = multiply_result.set_second_value(2).divide()
 print(f"""4. Calculated:
--> Suma 5 + 10: {add_result.get_result()}
--> Resta -10: {substract_result.get_result()}
--> Multiplicación x10: {multiply_result.get_result()}
+-> Suma 5 + 11: {add_result.get_result()}
+-> Resta -15: {substract_result.get_result()}
+-> Multiplicación x7: {multiply_result.get_result()}
 -> División /2: {divide_result.get_result()}
 """)
+
+
+class Calculadora():
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+
+    def add(self):
+        return self.first + self.second
+
+    def substract(self):
+        return self.first - self.second
+
+    def multiply(self):
+        return self.first * self.second
+
+    def divide(self):
+        return self.first / self.second
+
+
+calculadora = Calculadora(5, 10)
+calculadora.add()
