@@ -1,5 +1,5 @@
 <img src="../assets/img/python-logo.png" />
 
-# CAPITULO VI: Programas I/O y de manejo de archivos
+# CAPITULO VI: Librerias, Paquetes y Gestion de Paquetes
 
 ## Contenido
