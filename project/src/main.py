@@ -1,10 +1,7 @@
-from pathlib import Path
-ASSETS_FOLDER = Path(__file__).parent.parent.joinpath("assets")
+# from pathlib import Path
+# ASSETS_FOLDER = Path(__file__).parent.parent.joinpath("assets")
+from models.Person import Person
 
+person = Person("cruz", "ortiz", 29, 20349851, "Developer")
 
-def main():
-    pass
-
-
-if __name__ == "__main__":
-    main()
+print(person)
